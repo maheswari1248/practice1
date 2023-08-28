@@ -1,0 +1,257 @@
+
+Frequency
+public class frequency
+{
+public static void main(String args[])
+{
+  int a[]={-1,1,1,2,0,0,2,7,9,45,1,1};
+  boolean b[]=new boolean[a.length];
+int count=1;
+  for(int i=0;i<a.length;i++)
+  {
+      count=1;
+      if(b[i]==true)
+      continue;
+   for(int j=i+1;j<a.length;j++)
+  {
+     if(a[i]==a[j]){
+      b[j]=true;
+
+      count++;
+     }
+  }
+System.out.println(a[i]+"-> "+count);
+}
+}
+}
+
+deletion of duplicate
+
+ class deletion_dupliate 
+{
+
+	public static void main(String[] args) 
+{
+		StringBuffer sb=new StringBuffer("hello all good morning");
+		
+		int x,y;
+       for(x=0;x<sb.length();x++)
+ {
+    	   for(y=x+1;y<sb.length();y++) 
+{
+    		   if(sb.charAt(x)==(sb.charAt(y))) 
+{
+    			   sb.replace(y, y+1,"_");
+    			   
+    		   }
+    	   }
+    	   
+       }
+       String temp=" ";
+       for(int i=0;i<sb.length();i++) 
+{
+    	   if(sb.charAt(i)!='_') 
+{
+    		   temp=temp+sb.charAt(i);
+    		   
+    	   }
+       }
+       System.out.println(temp);
+       
+	
+}
+
+}
+  pattern
+public class pattern{
+public static void main(String args[])
+{
+  for(int i=1;i<=4;i++)
+  {
+    for(int j=i;j>=1;j--)
+   {
+    System.out.print(j);
+   }
+System.out.println( );
+}
+}
+}
+
+
+happy new year 
+public class happy{
+public static void main(String args[])
+{
+String s1="happy new year";
+		String s2[]=s1.split(" ");
+		String s3="";
+		int array[]=new int[s2.length];
+		int count=0,index=0,max=0;
+		for(int i=0;i<s2.length;i++)
+		{
+			s3=s2[i];
+			for(int j=0;j<s3.length();j++) 
+			{
+				if(s3.charAt(j)=='a'||s3.charAt(j)=='e'||s3.charAt(j)=='i'||s3.charAt(j)=='o'||s3.charAt(j)=='u')
+				{ 
+					count++;
+					
+				}
+				
+				}
+			array[i]=count;
+			for(int k=0;k<array.length;k++) 
+			{
+				
+				if(array[i]>max) {
+					max=array[i];
+					index=i;
+				}
+				
+			}
+		}
+		System.out.println(max +" " +array[index]);
+
+		
+	}
+
+}
+
+
+virus
+public class virus 
+{
+public static void main(String args[])
+{
+	String s1=new String("Vital Information Resource Under Size");
+	String s2[]=s1.split(" ");
+	String s="";
+	for(int i=0;i<s2.length;i++) {
+	    s=s2[i];
+	    for(int j=0;j<s.length();j++) {
+			System.out.print(s.charAt(0));
+			break;
+		}
+		
+	}
+	
+}
+}
+immutable
+public class immutable{
+public static void main(String args[]){
+  String s=new String("hello");int i;
+  for(  i=0;i<s.length();i++){
+    s.charAt(0)='M'; 
+ System.out.println(s[i]); 
+   }
+
+}
+}
+interface package oops;
+
+public class arthimeticproblem {
+	public static void main(String args[])
+	{
+	arth a=new arth();
+	a.add();
+	a.sub();
+	a.mul();
+	a.div();
+	}
+
+}
+interface Calc1{
+	public void add();
+	public void sub();
+}
+interface Calc2 extends Calc1{
+	public void mul();
+	public void div();
+}
+class arth implements Calc2{
+	int a=10;
+	int b=20;
+	@Override
+	public void add() {
+		
+		System.out.println(a+b);
+		
+	}
+
+	@Override
+	public void sub() {
+		System.out.println(a-b);
+		
+	}
+
+	@Override
+	public void mul() {
+		System.out.println(a*b);
+		
+	}
+
+	@Override
+	public void div() {
+		System.out.println(a/b);
+		
+	}
+	
+}
+ 
+Arrayindexoutofbound
+public class arrayindex {
+
+	public static void main(String[] args)
+	{
+		int a[]=new int[]{10,20,30,40};
+		try {
+			System.out.println(a[4]);
+		}
+		catch(Exception a1) {
+			System.out.println("hello");
+		}
+		 
+		 
+		 
+	}
+
+}
+Linkedlist and reverseorder
+public class linkedlisting 
+{
+
+	
+
+	public static void main(String[] args) {
+    LinkedList l=new LinkedList();
+    l.add(10);
+    l.add(20);
+    l.add(30);
+    l.add(40);
+    LinkedList l1=new LinkedList();
+    l1.add(l);
+    System.out.println(l1);
+   desc m=new desc();
+   m.method1();
+ 
+	}
+
+}
+class desc
+{ 
+	 public void method1() 
+	 {
+		 int a[]= {10,20,30,40};
+		 ArrayList a1=new ArrayList();
+		a1.add(10);
+                a1.add(20);
+                a1.add(30);
+               Collections.reverse(a1);
+               System.out.println(a1);
+
+	 } 
+	
+}
+
+
